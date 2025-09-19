@@ -7,13 +7,14 @@ namespace MyMonkeyApp;
 public class Program
 {
 	private static readonly string[] asciiArt = new[]
-	{
-		@"  (\__/)",
-		@"  (o.o )", 
-		@"  (> < )", 
-		@"   /\_/\   ",
-		@"  ( . . )  ",
-		@"  ( > < )  "
+    {
+        @"  (\__/)",
+        @"  (o.o )",
+        @"  (> < )",
+        @"   /\_/\   ",
+        @"  ( . . )  ",
+        @"  ( > < )  ",
+        @"  ( O o )  "
 	};
 
 	public static void Main(string[] args)
