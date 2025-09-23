@@ -9,6 +9,46 @@ namespace MyMonkeyApp;
 /// </summary>
 public static class MonkeyHelper
 {
+    private static readonly HashSet<string> viewedMonkeys = new();
+
+    /// <summary>
+    /// Tracks a monkey as viewed by name.
+    /// </summary>
+    public static void TrackViewed(string name)
+    {
+        if (!string.IsNullOrWhiteSpace(name))
+            viewedMonkeys.Add(name);
+    }
+
+    /// <summary>
+    /// Gets the count of unique monkeys viewed during the session.
+    /// </summary>
+    public static int GetViewedCount() => viewedMonkeys.Count;
+
+    /// <summary>
+    /// Gets the names of all viewed monkeys.
+    /// </summary>
+    public static IReadOnlyCollection<string> GetViewedMonkeys() => viewedMonkeys;
+    /// <summary>
+    /// Adds a vote for the specified monkey by name.
+    /// </summary>
+    public static void Vote(string name)
+    {
+        var monkey = GetMonkeyByName(name);
+        if (monkey != null)
+        {
+            monkey.Votes++;
+        }
+    }
+
+    /// <summary>
+    /// Gets the vote count for the specified monkey by name.
+    /// </summary>
+    public static int GetVotes(string name)
+    {
+        var monkey = GetMonkeyByName(name);
+        return monkey?.Votes ?? 0;
+    }
     private static readonly List<Monkey> monkeys = new()
     {
         new Monkey { Name = "Baboon", Location = "Africa & Asia", Details = "Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae.", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg", Population = 10000, Latitude = -8.783195, Longitude = 34.508523 },

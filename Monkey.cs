@@ -12,4 +12,9 @@ public class Monkey
     public int Population { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
+
+    /// <summary>
+    /// Number of votes for this monkey.
+    /// </summary>
+    public int Votes { get; set; } = 0;
 }
