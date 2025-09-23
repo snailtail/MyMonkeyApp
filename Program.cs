@@ -1,9 +1,7 @@
 ﻿using MyMonkeyApp;
 
 
-public class Program
-{
-	private static readonly string[] asciiArt = new[]
+string[] asciiArt = new[]
     {
         @"  (\__/)",
         @"  (o.o )",
