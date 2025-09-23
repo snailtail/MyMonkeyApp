@@ -1,15 +1,18 @@
 ﻿using MyMonkeyApp;
 
 
-var asciiArt = new[]
+public class Program
 {
-	@"  (\__/)",
-	@"  (o.o )",
-	@"  (> < )",
-	@"   /\_/\   ",
-	@"  ( . . )  ",
-	@"  ( > < )  "
-};
+	private static readonly string[] asciiArt = new[]
+    {
+        @"  (\__/)",
+        @"  (o.o )",
+        @"  (> < )",
+        @"   /\_/\   ",
+        @"  ( . . )  ",
+        @"  ( > < )  ",
+        @"  ( O o )  "
+	};
 
 
 var bananaArt = new[]
